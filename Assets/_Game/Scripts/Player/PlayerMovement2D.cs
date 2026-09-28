@@ -44,6 +44,16 @@ public sealed class PlayerMovement2D : MonoBehaviour
 
     private void FixedUpdate()
     {
+        // Let Rigidbody2D resolve collisions with the four map walls.
         body.linearVelocity = movementInput * moveSpeed;
+    }
+
+    private void OnDisable()
+    {
+        movementInput = Vector2.zero;
+        if (body != null)
+        {
+            body.linearVelocity = Vector2.zero;
+        }
     }
 }

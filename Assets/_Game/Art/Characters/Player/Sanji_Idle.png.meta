@@ -100,10 +100,10 @@ TextureImporter:
       name: Sanji_Idle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 259
-        height: 757
+        x: 12
+        y: 80
+        width: 272
+        height: 606
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,10 +122,10 @@ TextureImporter:
       name: Sanji_Idle_1
       rect:
         serializedVersion: 2
-        x: 259
-        y: 0
+        x: 283
+        y: 82
         width: 259
-        height: 757
+        height: 603
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,10 +144,10 @@ TextureImporter:
       name: Sanji_Idle_2
       rect:
         serializedVersion: 2
-        x: 518
-        y: 0
-        width: 259
-        height: 757
+        x: 549
+        y: 82
+        width: 264
+        height: 560
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,10 +166,10 @@ TextureImporter:
       name: Sanji_Idle_3
       rect:
         serializedVersion: 2
-        x: 777
-        y: 0
-        width: 251
-        height: 757
+        x: 823
+        y: 80
+        width: 274
+        height: 590
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,10 +188,10 @@ TextureImporter:
       name: Sanji_Idle_4
       rect:
         serializedVersion: 2
-        x: 1028
-        y: 0
-        width: 254
-        height: 757
+        x: 1096
+        y: 78
+        width: 273
+        height: 557
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,10 +210,10 @@ TextureImporter:
       name: Sanji_Idle_5
       rect:
         serializedVersion: 2
-        x: 1283
-        y: 0
-        width: 256
-        height: 757
+        x: 1369
+        y: 78
+        width: 268
+        height: 559
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -232,13 +232,13 @@ TextureImporter:
       name: Sanji_Idle_6
       rect:
         serializedVersion: 2
-        x: 1543
-        y: 0
-        width: 253
-        height: 757
+        x: 1637
+        y: 78
+        width: 265
+        height: 555
       alignment: 7
       pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 1, w: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
@@ -254,10 +254,10 @@ TextureImporter:
       name: Sanji_Idle_7
       rect:
         serializedVersion: 2
-        x: 1796
-        y: 0
-        width: 276
-        height: 757
+        x: 1902
+        y: 78
+        width: 266
+        height: 556
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,7 +286,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":259.0,"y":757.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":271.0,"y":724.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Sanji_Idle_0: -227371352
       Sanji_Idle_1: 1066013247
