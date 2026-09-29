@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 210
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,11 +100,11 @@ TextureImporter:
       name: Sanji_Run_0
       rect:
         serializedVersion: 2
-        x: 7
-        y: 374
-        width: 315
-        height: 364
-      alignment: 9
+        x: 0
+        y: 378
+        width: 312
+        height: 378
+      alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -112,7 +112,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bee63fd39c74d9f47bf1aca417756156
+      spriteID: c25dc893136effa40ad5cffaa02d16bf
       internalID: 1158684404
       vertices: []
       indices: 
@@ -122,11 +122,11 @@ TextureImporter:
       name: Sanji_Run_1
       rect:
         serializedVersion: 2
-        x: 350
-        y: 375
-        width: 349
-        height: 363
-      alignment: 9
+        x: 365
+        y: 376
+        width: 415
+        height: 378
+      alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -134,8 +134,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c07baf7cfc7ec64ebf6a5a4e8aeee46
+      spriteID: 68e2d6740b0b26041bdc2ec19fa33336
       internalID: 1017731972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanji_Run_2
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 378
+        width: 415
+        height: 378
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3069a312892abf40b4967a12c96d229
+      internalID: 87222269
       vertices: []
       indices: 
       edges: []
@@ -144,11 +166,11 @@ TextureImporter:
       name: Sanji_Run_3
       rect:
         serializedVersion: 2
-        x: 799
-        y: 386
-        width: 395
-        height: 365
-      alignment: 9
+        x: 1232
+        y: 369
+        width: 415
+        height: 378
+      alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -156,7 +178,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79f007a9598393240b87974c9b5839aa
+      spriteID: bfb7b259e567474428b5861e7d02da39
       internalID: -324034393
       vertices: []
       indices: 
@@ -166,11 +188,11 @@ TextureImporter:
       name: Sanji_Run_4
       rect:
         serializedVersion: 2
-        x: 1241
-        y: 373
-        width: 361
-        height: 362
-      alignment: 9
+        x: 1649
+        y: 374
+        width: 415
+        height: 378
+      alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -178,8 +200,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0024b01ef40b554bae395f8b0f2a367
-      internalID: -857636607
+      spriteID: 4ff461c818016864e8d6ef465aed31c7
+      internalID: -139345210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanji_Run_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 389
+        height: 378
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ce6490f4d75c164a9506c2f5c191c03
+      internalID: -1816028948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sanji_Run_6
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 0
+        width: 415
+        height: 378
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7905a163363cb44f8188979069a8ee0
+      internalID: -1808127261
       vertices: []
       indices: 
       edges: []
@@ -188,11 +254,11 @@ TextureImporter:
       name: Sanji_Run_7
       rect:
         serializedVersion: 2
-        x: 1681
-        y: 368
-        width: 350
-        height: 368
-      alignment: 9
+        x: 830
+        y: 0
+        width: 415
+        height: 378
+      alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -200,21 +266,21 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f87d53bb11914bb4a8c5ae488ec10674
-      internalID: -12465336
+      spriteID: 2e683cf7a55ece94f94d9b0ed98d5126
+      internalID: 1018311470
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sanji_Run_10
+      name: Sanji_Run_8
       rect:
         serializedVersion: 2
-        x: 28
-        y: 16
-        width: 311
-        height: 355
-      alignment: 9
+        x: 1263
+        y: 0
+        width: 415
+        height: 378
+      alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -222,21 +288,21 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 617290aa8c91beb4cbb48db62512e185
-      internalID: -437478744
+      spriteID: 64deed0f9b29b8c41a1f278216de25cb
+      internalID: 1909504643
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sanji_Run_11
+      name: Sanji_Run_9
       rect:
         serializedVersion: 2
-        x: 1695
-        y: 12
-        width: 340
-        height: 347
-      alignment: 9
+        x: 1660
+        y: 0
+        width: 415
+        height: 378
+      alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
@@ -244,74 +310,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a1abf5b23fb2964bb914fbbc7d9bc82
-      internalID: 1465643223
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sanji_Run_12
-      rect:
-        serializedVersion: 2
-        x: 399
-        y: 14
-        width: 375
-        height: 365
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b83c6d679a6e7fd4c8398a6e874be268
-      internalID: -1105071998
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sanji_Run_13
-      rect:
-        serializedVersion: 2
-        x: 841
-        y: 25
-        width: 376
-        height: 354
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f5f310beb3539fc4aba7f379355b5d3b
-      internalID: -340024295
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sanji_Run_14
-      rect:
-        serializedVersion: 2
-        x: 1290
-        y: 9
-        width: 366
-        height: 350
-      alignment: 9
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 29872ff1c411efe4fb12d158842042ff
-      internalID: -748787755
+      spriteID: d7d3ab9da201e674fb4b73a3e81b934f
+      internalID: 1813341894
       vertices: []
       indices: 
       edges: []
@@ -330,28 +330,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":10.0,"y":2.0},"gridSpriteSize":{"x":207.0,"y":378.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":2.0},"gridSpriteSize":{"x":415.0,"y":378.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Sanji_Run_0: 1158684404
       Sanji_Run_1: 1017731972
-      Sanji_Run_10: -437478744
-      Sanji_Run_11: 1465643223
-      Sanji_Run_12: -1105071998
-      Sanji_Run_13: -340024295
-      Sanji_Run_14: -748787755
-      Sanji_Run_15: -1140459762
-      Sanji_Run_16: 447364955
-      Sanji_Run_17: 1313089981
-      Sanji_Run_18: 1459725254
-      Sanji_Run_19: 2101185862
       Sanji_Run_2: 87222269
       Sanji_Run_3: -324034393
-      Sanji_Run_4: -857636607
-      Sanji_Run_5: -1482243070
-      Sanji_Run_6: 1444830460
-      Sanji_Run_7: -12465336
-      Sanji_Run_8: 452755123
-      Sanji_Run_9: 576099427
+      Sanji_Run_4: -139345210
+      Sanji_Run_5: -1816028948
+      Sanji_Run_6: -1808127261
+      Sanji_Run_7: 1018311470
+      Sanji_Run_8: 1909504643
+      Sanji_Run_9: 1813341894
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

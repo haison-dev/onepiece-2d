@@ -12,6 +12,8 @@ public sealed class PlayerMovement2D : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Animator animator;
     private Vector2 movementInput;
+    private Vector2 autoMoveInput;
+    private bool isAutoMoving;
 
     private void Awake()
     {
@@ -29,10 +31,21 @@ public sealed class PlayerMovement2D : MonoBehaviour
 
     private void Update()
     {
-        movementInput = new Vector2(
+        Vector2 manualInput = new Vector2(
             Input.GetAxisRaw("Horizontal"),
             Input.GetAxisRaw("Vertical")
         ).normalized;
+
+        // Manual movement always takes priority over an automatic approach.
+        if (manualInput.sqrMagnitude > 0.01f)
+        {
+            isAutoMoving = false;
+            movementInput = manualInput;
+        }
+        else
+        {
+            movementInput = isAutoMoving ? autoMoveInput : Vector2.zero;
+        }
 
         animator.SetBool(IsMovingHash, movementInput.sqrMagnitude > 0.01f);
 
@@ -40,6 +53,31 @@ public sealed class PlayerMovement2D : MonoBehaviour
         {
             spriteRenderer.flipX = movementInput.x < 0f;
         }
+    }
+
+    public void SetAutoMoveDirection(Vector2 direction)
+    {
+        autoMoveInput = direction.normalized;
+        isAutoMoving = autoMoveInput.sqrMagnitude > 0.01f;
+    }
+
+    public void StopAutoMovement()
+    {
+        isAutoMoving = false;
+        autoMoveInput = Vector2.zero;
+        movementInput = Vector2.zero;
+
+        if (body != null)
+            body.linearVelocity = Vector2.zero;
+
+        if (animator != null)
+            animator.SetBool(IsMovingHash, false);
+    }
+
+    public void FaceHorizontal(float directionX)
+    {
+        if (spriteRenderer != null && !Mathf.Approximately(directionX, 0f))
+            spriteRenderer.flipX = directionX < 0f;
     }
 
     private void FixedUpdate()
@@ -50,6 +88,8 @@ public sealed class PlayerMovement2D : MonoBehaviour
 
     private void OnDisable()
     {
+        isAutoMoving = false;
+        autoMoveInput = Vector2.zero;
         movementInput = Vector2.zero;
         if (body != null)
         {

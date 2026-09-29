@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: aba9fb10893713a4ba88a9433d58b642
+guid: d9e738959aa19304795cf5974e89372d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 180
+  spritePixelsToUnits: 160
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,185 +97,177 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sanji_Attack_0
+      name: Kizaru_Idle_0
       rect:
         serializedVersion: 2
-        x: 31
-        y: 170
-        width: 227
-        height: 457
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline:
-      - - {x: 0, y: -32}
-        - {x: 32, y: 0}
-        - {x: 0, y: 32}
-        - {x: -32, y: 0}
-      physicsShape:
-      - - {x: 0, y: -32}
-        - {x: 32, y: 0}
-        - {x: 0, y: 32}
-        - {x: -32, y: 0}
-      tessellationDetail: 0
-      bones: []
-      spriteID: dbae0b2b1a5bb7e4080484123c4d54f3
-      internalID: -1238731308
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sanji_Attack_1
-      rect:
-        serializedVersion: 2
-        x: 282
-        y: 170
-        width: 215
-        height: 465
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cada4a0c50ba5d541bec9adb9a3c37eb
-      internalID: -1416921258
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sanji_Attack_2
-      rect:
-        serializedVersion: 2
-        x: 557
-        y: 171
-        width: 255
-        height: 447
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fb2da99c60d3d794e9fa39a5a9b38df6
-      internalID: -1920158679
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sanji_Attack_3
-      rect:
-        serializedVersion: 2
-        x: 823
-        y: 171
+        x: 0
+        y: 0
         width: 276
-        height: 525
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        height: 724
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9d54b80afa9002b47b9dbe554a050137
-      internalID: -1049766205
+      spriteID: dec7a44de73457a498afdebecc1bec72
+      internalID: 540533590
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sanji_Attack_4
+      name: Kizaru_Idle_1
       rect:
         serializedVersion: 2
-        x: 1105
-        y: 158
+        x: 275
+        y: 0
         width: 273
-        height: 467
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        height: 724
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5de467081d3b4334eb4b1ca5d8d6957f
-      internalID: 1297020370
+      spriteID: e24bc63d9a11d154ea8d7fc64c1917d0
+      internalID: -768252291
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sanji_Attack_5
+      name: Kizaru_Idle_2
       rect:
         serializedVersion: 2
-        x: 1385
-        y: 165
-        width: 264
-        height: 451
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 549
+        y: 0
+        width: 269
+        height: 724
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88fc877b721603b43969a34d6a2f60eb
-      internalID: -119253460
+      spriteID: 898a5a2b0f5e9d844a0f718c51278282
+      internalID: -1791026807
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sanji_Attack_6
+      name: Kizaru_Idle_3
       rect:
         serializedVersion: 2
-        x: 1655
-        y: 162
-        width: 245
-        height: 384
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 818
+        y: 0
+        width: 271
+        height: 724
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ccec924f626abe549ba9946f7029ff0d
-      internalID: 605671310
+      spriteID: 8a7f8748e9caa5342a26e4ff86fcc98e
+      internalID: 1644985828
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sanji_Attack_7
+      name: Kizaru_Idle_4
       rect:
         serializedVersion: 2
-        x: 1932
-        y: 164
-        width: 207
-        height: 380
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1090
+        y: 0
+        width: 265
+        height: 724
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ad436e4f0db81444a21d70a4249510b
-      internalID: 1320435714
+      spriteID: f88de534fc575e34cbe1176541e0ed17
+      internalID: -677944396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 0
+        width: 269
+        height: 724
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd0146bd28023904eaa242caf6e90315
+      internalID: -908642940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 0
+        width: 280
+        height: 724
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 081168a4c0857e34aa20b6ee8fb16c7c
+      internalID: 1119090630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 1901
+        y: 0
+        width: 267
+        height: 724
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c64f1492c1857d4aa271de72d05812b
+      internalID: 401991345
       vertices: []
       indices: 
       edges: []
@@ -284,7 +276,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 95deee6bbfc9ab143a11c12a2c48f264
+    spriteID: 3017f6eed793a204d87ddc3b0d230794
     internalID: 0
     vertices: []
     indices: 
@@ -294,18 +286,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":271.0,"y":724.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
-      - key: SpriteEditor.SliceOnImport
-        value: False
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":271.0,"y":724.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Sanji_Attack_0: -1238731308
-      Sanji_Attack_1: -1416921258
-      Sanji_Attack_2: -1920158679
-      Sanji_Attack_3: -1049766205
-      Sanji_Attack_4: 1297020370
-      Sanji_Attack_5: -119253460
-      Sanji_Attack_6: 605671310
-      Sanji_Attack_7: 1320435714
+      Kizaru_Idle_0: 540533590
+      Kizaru_Idle_1: -768252291
+      Kizaru_Idle_2: -1791026807
+      Kizaru_Idle_3: 1644985828
+      Kizaru_Idle_4: -677944396
+      Kizaru_Idle_5: -908642940
+      Kizaru_Idle_6: 1119090630
+      Kizaru_Idle_7: 401991345
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
