@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b87e3f02bc1e2ce459dcaae9fa1c059a
+guid: ea4d572ad5efbea47896d9e971787c66
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 220
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sanji_Run_0
+      name: Zoro_Idle_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 378
-        width: 312
-        height: 378
+        x: 7
+        y: 515
+        width: 347
+        height: 502
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +112,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c25dc893136effa40ad5cffaa02d16bf
-      internalID: 1158684404
+      spriteID: c642c7f667e1f044d9ab5af3bb4273a2
+      internalID: -227371352
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sanji_Run_1
+      name: Zoro_Idle_1
       rect:
         serializedVersion: 2
-        x: 365
-        y: 376
-        width: 415
-        height: 378
+        x: 388
+        y: 514
+        width: 347
+        height: 503
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 68e2d6740b0b26041bdc2ec19fa33336
-      internalID: 1017731972
+      spriteID: e9555b73c1811fc43b478bf12dcb7075
+      internalID: 1066013247
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sanji_Run_2
+      name: Zoro_Idle_2
       rect:
         serializedVersion: 2
-        x: 795
-        y: 378
-        width: 415
-        height: 378
+        x: 768
+        y: 513
+        width: 342
+        height: 511
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3069a312892abf40b4967a12c96d229
-      internalID: 87222269
+      spriteID: c3899fd47644e044f8fb4f851b27e5f6
+      internalID: -1854431407
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sanji_Run_3
+      name: Zoro_Idle_3
       rect:
         serializedVersion: 2
-        x: 1232
-        y: 369
-        width: 415
-        height: 378
+        x: 1152
+        y: 514
+        width: 342
+        height: 505
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,20 +178,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfb7b259e567474428b5861e7d02da39
-      internalID: -324034393
+      spriteID: 3a75f597c6b14bf4ab92625cd7434e6f
+      internalID: 1373800300
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sanji_Run_4
+      name: Zoro_Idle_4
       rect:
         serializedVersion: 2
-        x: 1649
-        y: 374
-        width: 415
-        height: 378
+        x: 8
+        y: 14
+        width: 346
+        height: 489
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ff461c818016864e8d6ef465aed31c7
-      internalID: -139345210
+      spriteID: 83b998f9e4d1e39438ebdb670d9783f6
+      internalID: -1195582679
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sanji_Run_5
+      name: Zoro_Idle_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 389
-        height: 378
+        x: 387
+        y: 15
+        width: 351
+        height: 492
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,20 +222,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ce6490f4d75c164a9506c2f5c191c03
-      internalID: -1816028948
+      spriteID: 3ea8e9f4a70c1964185b795714d17b78
+      internalID: 1057907513
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sanji_Run_6
+      name: Zoro_Idle_6
       rect:
         serializedVersion: 2
-        x: 415
-        y: 0
-        width: 415
-        height: 378
+        x: 771
+        y: 13
+        width: 349
+        height: 499
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7905a163363cb44f8188979069a8ee0
-      internalID: -1808127261
+      spriteID: 80f46d927216d5648830ed3a84bfe924
+      internalID: 729740103
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sanji_Run_7
+      name: Zoro_Idle_7
       rect:
         serializedVersion: 2
-        x: 830
-        y: 0
-        width: 415
-        height: 378
+        x: 1152
+        y: 14
+        width: 351
+        height: 496
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,52 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e683cf7a55ece94f94d9b0ed98d5126
-      internalID: 1018311470
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sanji_Run_8
-      rect:
-        serializedVersion: 2
-        x: 1263
-        y: 0
-        width: 415
-        height: 378
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64deed0f9b29b8c41a1f278216de25cb
-      internalID: 1909504643
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Sanji_Run_9
-      rect:
-        serializedVersion: 2
-        x: 1660
-        y: 0
-        width: 415
-        height: 378
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d7d3ab9da201e674fb4b73a3e81b934f
-      internalID: 1813341894
+      spriteID: 36f22026bd6922746a4089537ab93f53
+      internalID: -1272944603
       vertices: []
       indices: 
       edges: []
@@ -320,7 +276,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: ca3feb19eb553be4b8378fda81b285ea
+    spriteID: 6a66115f0596b024db6b909ddd1fcbc8
     internalID: 0
     vertices: []
     indices: 
@@ -330,18 +286,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":5.0,"y":2.0},"gridSpriteSize":{"x":415.0,"y":378.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":2.0},"gridSpriteSize":{"x":384.0,"y":512.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Sanji_Run_0: 1158684404
-      Sanji_Run_1: 1017731972
-      Sanji_Run_2: 87222269
-      Sanji_Run_3: -324034393
-      Sanji_Run_4: -139345210
-      Sanji_Run_5: -1816028948
-      Sanji_Run_6: -1808127261
-      Sanji_Run_7: 1018311470
-      Sanji_Run_8: 1909504643
-      Sanji_Run_9: 1813341894
+      Zoro_Idle_0: -227371352
+      Zoro_Idle_1: 1066013247
+      Zoro_Idle_2: -1854431407
+      Zoro_Idle_3: 1373800300
+      Zoro_Idle_4: -1195582679
+      Zoro_Idle_5: 1057907513
+      Zoro_Idle_6: 729740103
+      Zoro_Idle_7: -1272944603
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

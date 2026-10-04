@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ea4d572ad5efbea47896d9e971787c66
+guid: aba9fb10893713a4ba88a9433d58b642
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 256
+  spritePixelsToUnits: 170
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sanji_Idle_0
+      name: Zoro_Attack_0
       rect:
         serializedVersion: 2
-        x: 12
-        y: 80
-        width: 272
-        height: 606
+        x: 43
+        y: 449
+        width: 356
+        height: 362
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +112,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c642c7f667e1f044d9ab5af3bb4273a2
-      internalID: -227371352
+      spriteID: 373de28fca2e5714eb8395a6fec49eb4
+      internalID: 2044446946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sanji_Idle_1
+      name: Zoro_Attack_1
       rect:
         serializedVersion: 2
-        x: 283
-        y: 82
-        width: 259
-        height: 603
+        x: 474
+        y: 449
+        width: 306
+        height: 374
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9555b73c1811fc43b478bf12dcb7075
-      internalID: 1066013247
+      spriteID: 70e5312b1e99bbc4e8c7e37f27aad923
+      internalID: 1017880638
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sanji_Idle_2
+      name: Zoro_Attack_2
       rect:
         serializedVersion: 2
-        x: 549
-        y: 82
-        width: 264
-        height: 560
+        x: 906
+        y: 445
+        width: 360
+        height: 355
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3899fd47644e044f8fb4f851b27e5f6
-      internalID: -1854431407
+      spriteID: 1bf1a97c5ec9f624c9cd2bd8a6934087
+      internalID: 10742462
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sanji_Idle_3
+      name: Zoro_Attack_3
       rect:
         serializedVersion: 2
-        x: 823
-        y: 80
-        width: 274
-        height: 590
+        x: 1339
+        y: 447
+        width: 377
+        height: 357
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,20 +178,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a75f597c6b14bf4ab92625cd7434e6f
-      internalID: 1373800300
+      spriteID: 5af03515c1b757c4d826652afe7cd257
+      internalID: 1920322603
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sanji_Idle_4
+      name: Zoro_Attack_4
       rect:
         serializedVersion: 2
-        x: 1096
-        y: 78
-        width: 273
-        height: 557
+        x: 31
+        y: 30
+        width: 324
+        height: 347
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83b998f9e4d1e39438ebdb670d9783f6
-      internalID: -1195582679
+      spriteID: 46f6d19ae89334e45a89bbeaef54c323
+      internalID: -1912631179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sanji_Idle_5
+      name: Zoro_Attack_5
       rect:
         serializedVersion: 2
-        x: 1369
-        y: 78
-        width: 268
-        height: 559
+        x: 455
+        y: 32
+        width: 409
+        height: 347
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,20 +222,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ea8e9f4a70c1964185b795714d17b78
-      internalID: 1057907513
+      spriteID: 688145299d6b7a042bd192774a57f8df
+      internalID: 306203233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sanji_Idle_6
+      name: Zoro_Attack_6
       rect:
         serializedVersion: 2
-        x: 1637
-        y: 78
-        width: 265
-        height: 555
+        x: 894
+        y: 32
+        width: 411
+        height: 344
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80f46d927216d5648830ed3a84bfe924
-      internalID: 729740103
+      spriteID: 412c27d787f379a40b65bc0f9e70254e
+      internalID: 1166948645
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sanji_Idle_7
+      name: Zoro_Attack_7
       rect:
         serializedVersion: 2
-        x: 1902
-        y: 78
-        width: 266
-        height: 556
+        x: 1325
+        y: 34
+        width: 384
+        height: 345
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,8 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36f22026bd6922746a4089537ab93f53
-      internalID: -1272944603
+      spriteID: 0e2912d6d6fb2444493f9b332065f350
+      internalID: 954236955
       vertices: []
       indices: 
       edges: []
@@ -276,7 +276,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 6a66115f0596b024db6b909ddd1fcbc8
+    spriteID: 95deee6bbfc9ab143a11c12a2c48f264
     internalID: 0
     vertices: []
     indices: 
@@ -286,16 +286,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":271.0,"y":724.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":2.0},"gridSpriteSize":{"x":429.0,"y":458.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      - key: SpriteEditor.SliceOnImport
+        value: False
     nameFileIdTable:
-      Sanji_Idle_0: -227371352
-      Sanji_Idle_1: 1066013247
-      Sanji_Idle_2: -1854431407
-      Sanji_Idle_3: 1373800300
-      Sanji_Idle_4: -1195582679
-      Sanji_Idle_5: 1057907513
-      Sanji_Idle_6: 729740103
-      Sanji_Idle_7: -1272944603
+      Zoro_Attack_0: 2044446946
+      Zoro_Attack_1: 1017880638
+      Zoro_Attack_2: 10742462
+      Zoro_Attack_3: 1920322603
+      Zoro_Attack_4: -1912631179
+      Zoro_Attack_5: 306203233
+      Zoro_Attack_6: 1166948645
+      Zoro_Attack_7: 954236955
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

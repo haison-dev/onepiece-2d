@@ -15,6 +15,7 @@ public sealed class PlayerAttackHitbox2D : MonoBehaviour
     private readonly HashSet<IDamageable> hitTargets = new();
 
     private SpriteRenderer spriteRenderer;
+    private SpriteRenderer attackEffectRenderer;
     private float attackPointDistance;
     private float attackPointHeight;
 
@@ -22,6 +23,7 @@ public sealed class PlayerAttackHitbox2D : MonoBehaviour
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         CacheAttackPointPosition();
+        CacheAttackEffectRenderer();
         UpdateAttackPointDirection();
     }
 
@@ -90,6 +92,12 @@ public sealed class PlayerAttackHitbox2D : MonoBehaviour
         attackPointHeight = localPosition.y;
     }
 
+    private void CacheAttackEffectRenderer()
+    {
+        if (attackPoint != null)
+            attackEffectRenderer = attackPoint.GetComponentInChildren<SpriteRenderer>(true);
+    }
+
     private void UpdateAttackPointDirection()
     {
         if (attackPoint == null || spriteRenderer == null)
@@ -101,6 +109,9 @@ public sealed class PlayerAttackHitbox2D : MonoBehaviour
         localPosition.x = attackPointDistance * direction;
         localPosition.y = attackPointHeight;
         attackPoint.localPosition = localPosition;
+
+        if (attackEffectRenderer != null)
+            attackEffectRenderer.flipX = spriteRenderer.flipX;
     }
 
     private void OnDrawGizmosSelected()
