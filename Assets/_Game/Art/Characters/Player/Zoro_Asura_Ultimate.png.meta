@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4bee11f475e015543a33d239849638ec
+guid: 966df2160c64ac64599e88028c051030
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 180
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: King_Idle_0
+      name: Zoro_Asura_Ultimate_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 530
-        width: 365
-        height: 440
+        x: 46
+        y: 512
+        width: 364
+        height: 475
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +112,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aad14402bb552a548a1413a35d2c4c93
-      internalID: 1030892424
+      spriteID: 86131f9d7963ef243903f02aafe72a99
+      internalID: 1442184890
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: King_Idle_1
+      name: Zoro_Asura_Ultimate_1
       rect:
         serializedVersion: 2
-        x: 397
-        y: 528
-        width: 371
-        height: 438
+        x: 439
+        y: 512
+        width: 343
+        height: 484
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a009375f1c62c24cb794bf2152d6c11
-      internalID: -1061852265
+      spriteID: 0d2c9cf3856849443aa8a64f8fab8760
+      internalID: -446706825
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: King_Idle_2
+      name: Zoro_Asura_Ultimate_2
       rect:
         serializedVersion: 2
-        x: 768
-        y: 529
-        width: 384
-        height: 440
+        x: 814
+        y: 512
+        width: 278
+        height: 503
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,19 +156,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d61e1396de4f8404caf56d621ec6f301
-      internalID: 430549896
+      spriteID: 818684ac0b8220149a73670d844a320b
+      internalID: 748575877
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: King_Idle_3
+      name: Zoro_Asura_Ultimate_3
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 528
-        width: 368
+        x: 1159
+        y: 512
+        width: 335
+        height: 458
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25dc84a6682476342afe9740b782b0d0
+      internalID: 216514045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zoro_Asura_Ultimate_4
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 47
+        width: 329
         height: 431
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -178,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77bbe6c9add11e64e93f414c9cb30f56
-      internalID: 1797414101
+      spriteID: bcc904ba4451e7848b87a3cd08e67b80
+      internalID: 70622667
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: King_Idle_4
+      name: Zoro_Asura_Ultimate_5
       rect:
         serializedVersion: 2
-        x: 29
-        y: 40
-        width: 363
-        height: 452
+        x: 413
+        y: 46
+        width: 381
+        height: 414
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +222,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d48c48ff5bb2374b9f3de56f140db7a
-      internalID: 801847758
+      spriteID: da0e65f6b8d938e4fb0c6d9aa652f561
+      internalID: -1154083637
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: King_Idle_5
+      name: Zoro_Asura_Ultimate_6
       rect:
         serializedVersion: 2
-        x: 396
-        y: 40
-        width: 372
-        height: 446
+        x: 794
+        y: 48
+        width: 353
+        height: 465
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0db8f99be8603184ca2c27d2d6f0d69a
-      internalID: 1657816315
+      spriteID: 08a454027f418a446bd806e3eb1c5f81
+      internalID: -430951897
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: King_Idle_6
+      name: Zoro_Asura_Ultimate_7
       rect:
         serializedVersion: 2
-        x: 768
-        y: 42
-        width: 384
-        height: 445
+        x: 1161
+        y: 46
+        width: 350
+        height: 359
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,30 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d82585fe9c6ede542b82ae0700d37f5d
-      internalID: 667981420
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: King_Idle_7
-      rect:
-        serializedVersion: 2
-        x: 1152
-        y: 35
-        width: 369
-        height: 443
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2e4b2cc673a39ca4d8743b6330fb8c32
-      internalID: -4061598
+      spriteID: 31dbaef80bf00d1449d90b2cefa5f8dc
+      internalID: 761598397
       vertices: []
       indices: 
       edges: []
@@ -276,7 +276,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: bafd9237c1b6cde48873a0949ec24502
+    spriteID: 8ddd3b80fb6c4504298f362d89ca7c39
     internalID: 0
     vertices: []
     indices: 
@@ -288,14 +288,14 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":2.0},"gridSpriteSize":{"x":384.0,"y":512.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      King_Idle_0: 1030892424
-      King_Idle_1: -1061852265
-      King_Idle_2: 430549896
-      King_Idle_3: 1797414101
-      King_Idle_4: 801847758
-      King_Idle_5: 1657816315
-      King_Idle_6: 667981420
-      King_Idle_7: -4061598
+      Zoro_Asura_Ultimate_0: 1442184890
+      Zoro_Asura_Ultimate_1: -446706825
+      Zoro_Asura_Ultimate_2: 748575877
+      Zoro_Asura_Ultimate_3: 216514045
+      Zoro_Asura_Ultimate_4: 70622667
+      Zoro_Asura_Ultimate_5: -1154083637
+      Zoro_Asura_Ultimate_6: -430951897
+      Zoro_Asura_Ultimate_7: 761598397
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

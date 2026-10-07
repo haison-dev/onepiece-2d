@@ -9,6 +9,8 @@ public sealed class PlayerAttackHitbox2D : MonoBehaviour
 
     [Header("Attack Settings")]
     [SerializeField, Min(1)] private int damage = 10;
+    [SerializeField, Range(0f, 1f)] private float criticalChance = 0.2f;
+    [SerializeField, Min(1f)] private float criticalDamageMultiplier = 2f;
     [SerializeField, Min(0.01f)] private float attackRadius = 0.3f;
     [SerializeField] private LayerMask enemyLayer;
 
@@ -54,8 +56,20 @@ public sealed class PlayerAttackHitbox2D : MonoBehaviour
             IDamageable target = hit.GetComponentInParent<IDamageable>();
 
             // One enemy may own multiple colliders, but receives one hit only.
-            if (target != null && hitTargets.Add(target))
-                target.TakeDamage(damage);
+            if (target == null || !hitTargets.Add(target))
+                continue;
+
+            bool isCritical = Random.value < criticalChance;
+            int finalDamage = isCritical
+                ? Mathf.Max(1, Mathf.RoundToInt(damage * criticalDamageMultiplier))
+                : damage;
+
+            target.TakeDamage(finalDamage);
+            DamagePopup.Show(
+                DamagePopup.PositionAbove(hit),
+                finalDamage,
+                isCritical ? DamagePopupType.Critical : DamagePopupType.Normal
+            );
         }
     }
 
@@ -114,6 +128,13 @@ public sealed class PlayerAttackHitbox2D : MonoBehaviour
             attackEffectRenderer.flipX = spriteRenderer.flipX;
     }
 
+    private void OnValidate()
+    {
+        damage = Mathf.Max(1, damage);
+        criticalChance = Mathf.Clamp01(criticalChance);
+        criticalDamageMultiplier = Mathf.Max(1f, criticalDamageMultiplier);
+        attackRadius = Mathf.Max(0.01f, attackRadius);
+    }
     private void OnDrawGizmosSelected()
     {
         if (attackPoint == null)

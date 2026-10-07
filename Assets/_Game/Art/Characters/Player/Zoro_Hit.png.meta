@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4bee11f475e015543a33d239849638ec
+guid: fce71dd49a754d14f9d3704a3f6ec51a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: King_Idle_0
+      name: Zoro_Hit_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 530
-        width: 365
-        height: 440
+        x: 43
+        y: 526
+        width: 309
+        height: 459
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +112,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aad14402bb552a548a1413a35d2c4c93
-      internalID: 1030892424
+      spriteID: 6250ffdf02f8583488f46f2b1649e496
+      internalID: -526282361
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: King_Idle_1
+      name: Zoro_Hit_1
       rect:
         serializedVersion: 2
-        x: 397
-        y: 528
-        width: 371
-        height: 438
+        x: 438
+        y: 526
+        width: 308
+        height: 421
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,20 +134,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a009375f1c62c24cb794bf2152d6c11
-      internalID: -1061852265
+      spriteID: f2f39f56022dae94caa8c5383aa894ba
+      internalID: -157555348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: King_Idle_2
+      name: Zoro_Hit_2
       rect:
         serializedVersion: 2
-        x: 768
-        y: 529
-        width: 384
-        height: 440
+        x: 798
+        y: 526
+        width: 340
+        height: 459
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d61e1396de4f8404caf56d621ec6f301
-      internalID: 430549896
+      spriteID: 4a28892598962ea4eb813d4117bde075
+      internalID: 2110505642
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: King_Idle_3
+      name: Zoro_Hit_3
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 528
-        width: 368
-        height: 431
+        x: 1178
+        y: 525
+        width: 331
+        height: 461
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,20 +178,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77bbe6c9add11e64e93f414c9cb30f56
-      internalID: 1797414101
+      spriteID: 318a83a0411b05442a5b0e48236819d1
+      internalID: 743229267
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: King_Idle_4
+      name: Zoro_Hit_4
       rect:
         serializedVersion: 2
-        x: 29
-        y: 40
-        width: 363
-        height: 452
+        x: 42
+        y: 56
+        width: 336
+        height: 399
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d48c48ff5bb2374b9f3de56f140db7a
-      internalID: 801847758
+      spriteID: 80b756322d939ac41bcf6422ba20cca2
+      internalID: -820654388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: King_Idle_5
+      name: Zoro_Hit_5
       rect:
         serializedVersion: 2
-        x: 396
-        y: 40
-        width: 372
-        height: 446
+        x: 415
+        y: 56
+        width: 295
+        height: 391
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,20 +222,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0db8f99be8603184ca2c27d2d6f0d69a
-      internalID: 1657816315
+      spriteID: 55101eb17402d7b4bbd6404a5ae7095d
+      internalID: 90117316
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: King_Idle_6
+      name: Zoro_Hit_6
       rect:
         serializedVersion: 2
-        x: 768
-        y: 42
-        width: 384
-        height: 445
+        x: 806
+        y: 52
+        width: 295
+        height: 442
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d82585fe9c6ede542b82ae0700d37f5d
-      internalID: 667981420
+      spriteID: e1a5f1db85a66ae488769444c41b1723
+      internalID: 930613562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: King_Idle_7
+      name: Zoro_Hit_7
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 35
-        width: 369
-        height: 443
+        x: 1194
+        y: 48
+        width: 292
+        height: 419
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -266,8 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2e4b2cc673a39ca4d8743b6330fb8c32
-      internalID: -4061598
+      spriteID: 4893b3b34851b774583285cfb8597dd6
+      internalID: 361529722
       vertices: []
       indices: 
       edges: []
@@ -276,7 +276,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: bafd9237c1b6cde48873a0949ec24502
+    spriteID: 63ed3f093b696c942854feaa8d3b8b18
     internalID: 0
     vertices: []
     indices: 
@@ -288,14 +288,14 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":2.0},"gridSpriteSize":{"x":384.0,"y":512.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      King_Idle_0: 1030892424
-      King_Idle_1: -1061852265
-      King_Idle_2: 430549896
-      King_Idle_3: 1797414101
-      King_Idle_4: 801847758
-      King_Idle_5: 1657816315
-      King_Idle_6: 667981420
-      King_Idle_7: -4061598
+      Zoro_Hit_0: -526282361
+      Zoro_Hit_1: -157555348
+      Zoro_Hit_2: 2110505642
+      Zoro_Hit_3: 743229267
+      Zoro_Hit_4: -820654388
+      Zoro_Hit_5: 90117316
+      Zoro_Hit_6: 930613562
+      Zoro_Hit_7: 361529722
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

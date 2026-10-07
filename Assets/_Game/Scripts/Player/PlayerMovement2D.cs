@@ -14,6 +14,9 @@ public sealed class PlayerMovement2D : MonoBehaviour
     private Vector2 movementInput;
     private Vector2 autoMoveInput;
     private bool isAutoMoving;
+    private bool isMovementLocked;
+
+    public bool IsMovementLocked => isMovementLocked;
 
     private void Awake()
     {
@@ -31,6 +34,13 @@ public sealed class PlayerMovement2D : MonoBehaviour
 
     private void Update()
     {
+        if (isMovementLocked)
+        {
+            movementInput = Vector2.zero;
+            animator.SetBool(IsMovingHash, false);
+            return;
+        }
+
         Vector2 manualInput = new Vector2(
             Input.GetAxisRaw("Horizontal"),
             Input.GetAxisRaw("Vertical")
@@ -57,6 +67,9 @@ public sealed class PlayerMovement2D : MonoBehaviour
 
     public void SetAutoMoveDirection(Vector2 direction)
     {
+        if (isMovementLocked)
+            return;
+
         autoMoveInput = direction.normalized;
         isAutoMoving = autoMoveInput.sqrMagnitude > 0.01f;
     }
@@ -80,15 +93,26 @@ public sealed class PlayerMovement2D : MonoBehaviour
             spriteRenderer.flipX = directionX < 0f;
     }
 
+    public void SetMovementLocked(bool locked)
+    {
+        isMovementLocked = locked;
+
+        if (locked)
+            StopAutoMovement();
+    }
+
     private void FixedUpdate()
     {
         // Let Rigidbody2D resolve collisions with the four map walls.
-        body.linearVelocity = movementInput * moveSpeed;
+        body.linearVelocity = isMovementLocked
+            ? Vector2.zero
+            : movementInput * moveSpeed;
     }
 
     private void OnDisable()
     {
         isAutoMoving = false;
+        isMovementLocked = false;
         autoMoveInput = Vector2.zero;
         movementInput = Vector2.zero;
         if (body != null)

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 4bee11f475e015543a33d239849638ec
+guid: 74f77c522efa4b96867b2832d0b9d0a6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: King_Idle_0
+      name: Kizaru_Attack_0
       rect:
         serializedVersion: 2
-        x: 29
-        y: 530
-        width: 365
-        height: 440
+        x: 62
+        y: 552
+        width: 289
+        height: 450
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,19 +112,85 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aad14402bb552a548a1413a35d2c4c93
-      internalID: 1030892424
+      spriteID: 373de28fca2e5714eb8395a6fec49eb4
+      internalID: 2044446946
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: King_Idle_1
+      name: Kizaru_Attack_1
       rect:
         serializedVersion: 2
-        x: 397
-        y: 528
-        width: 371
+        x: 366
+        y: 548
+        width: 376
+        height: 455
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70e5312b1e99bbc4e8c7e37f27aad923
+      internalID: 1017880638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_Attack_2
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 550
+        width: 367
+        height: 449
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf1a97c5ec9f624c9cd2bd8a6934087
+      internalID: 10742462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_Attack_3
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 546
+        width: 374
+        height: 454
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af03515c1b757c4d826652afe7cd257
+      internalID: 1920322603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kizaru_Attack_4
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 52
+        width: 393
         height: 438
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -134,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a009375f1c62c24cb794bf2152d6c11
-      internalID: -1061852265
+      spriteID: 46f6d19ae89334e45a89bbeaef54c323
+      internalID: -1912631179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: King_Idle_2
+      name: Kizaru_Attack_5
       rect:
         serializedVersion: 2
-        x: 768
-        y: 529
-        width: 384
-        height: 440
+        x: 417
+        y: 51
+        width: 414
+        height: 458
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +222,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d61e1396de4f8404caf56d621ec6f301
-      internalID: 430549896
+      spriteID: 688145299d6b7a042bd192774a57f8df
+      internalID: 306203233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: King_Idle_3
+      name: Kizaru_Attack_6
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 528
-        width: 368
-        height: 431
+        x: 831
+        y: 53
+        width: 361
+        height: 458
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 77bbe6c9add11e64e93f414c9cb30f56
-      internalID: 1797414101
+      spriteID: 412c27d787f379a40b65bc0f9e70254e
+      internalID: 1166948645
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: King_Idle_4
+      name: Kizaru_Attack_7
       rect:
         serializedVersion: 2
-        x: 29
-        y: 40
-        width: 363
-        height: 452
+        x: 1205
+        y: 41
+        width: 301
+        height: 457
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,74 +266,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d48c48ff5bb2374b9f3de56f140db7a
-      internalID: 801847758
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: King_Idle_5
-      rect:
-        serializedVersion: 2
-        x: 396
-        y: 40
-        width: 372
-        height: 446
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0db8f99be8603184ca2c27d2d6f0d69a
-      internalID: 1657816315
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: King_Idle_6
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 42
-        width: 384
-        height: 445
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d82585fe9c6ede542b82ae0700d37f5d
-      internalID: 667981420
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: King_Idle_7
-      rect:
-        serializedVersion: 2
-        x: 1152
-        y: 35
-        width: 369
-        height: 443
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2e4b2cc673a39ca4d8743b6330fb8c32
-      internalID: -4061598
+      spriteID: 0e2912d6d6fb2444493f9b332065f350
+      internalID: 954236955
       vertices: []
       indices: 
       edges: []
@@ -276,7 +276,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: bafd9237c1b6cde48873a0949ec24502
+    spriteID: 95deee6bbfc9ab143a11c12a2c48f264
     internalID: 0
     vertices: []
     indices: 
@@ -286,16 +286,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":2.0},"gridSpriteSize":{"x":384.0,"y":512.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":2.0},"gridSpriteSize":{"x":384.0,"y":512.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+      - key: SpriteEditor.SliceOnImport
+        value: False
     nameFileIdTable:
-      King_Idle_0: 1030892424
-      King_Idle_1: -1061852265
-      King_Idle_2: 430549896
-      King_Idle_3: 1797414101
-      King_Idle_4: 801847758
-      King_Idle_5: 1657816315
-      King_Idle_6: 667981420
-      King_Idle_7: -4061598
+      Kizaru_Attack_0: 2044446946
+      Kizaru_Attack_1: 1017880638
+      Kizaru_Attack_2: 10742462
+      Kizaru_Attack_3: 1920322603
+      Kizaru_Attack_4: -1912631179
+      Kizaru_Attack_5: 306203233
+      Kizaru_Attack_6: 1166948645
+      Kizaru_Attack_7: 954236955
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
