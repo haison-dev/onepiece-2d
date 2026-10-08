@@ -84,6 +84,12 @@ public sealed class PlayerHUD : MonoBehaviour
         DestroyCanvas();
     }
 
+    public void SetHudVisible(bool visible)
+    {
+        if (canvasObject != null)
+            canvasObject.SetActive(visible);
+    }
+
     [ContextMenu("Rebuild Player HUD Preview")]
     private void RebuildPreview()
     {

@@ -17,8 +17,6 @@ public sealed class DamagePopup : MonoBehaviour
     private static readonly Color DarkBlue = new Color32(24, 35, 78, 255);
     private static readonly Color Gold = new Color32(255, 211, 71, 255);
     private static readonly Color SoftRed = new Color32(224, 105, 79, 255);
-    private static readonly Color DeepRed = new Color32(116, 36, 38, 255);
-    private static readonly Color PlayerRed = new Color32(255, 87, 75, 255);
     private static readonly Color CritLabel = new Color32(255, 244, 202, 255);
 
     private readonly List<TextMesh> textLayers = new List<TextMesh>();
@@ -52,9 +50,12 @@ public sealed class DamagePopup : MonoBehaviour
     {
         startPosition = transform.position;
         horizontalDrift = Random.Range(-0.2f, 0.2f);
-        baseScale = type == DamagePopupType.Critical ? 1.12f : 0.94f;
+        baseScale = type == DamagePopupType.Critical ? 1.12f : 1f;
 
-        Font font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+        Font fallbackFont = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
+        Font numberFont = Resources.Load<Font>("Fonts/LilitaOne-Regular");
+        if (numberFont == null)
+            numberFont = fallbackFont;
         string value = amount.ToString(CultureInfo.InvariantCulture);
 
         switch (type)
@@ -63,23 +64,23 @@ public sealed class DamagePopup : MonoBehaviour
                 CreateOutlinedText(
                     "CriticalValue",
                     value,
-                    font,
-                    0.074f,
+                    numberFont,
+                    0.105f,
                     Gold,
                     DarkBlue,
-                    0.018f,
+                    0.026f,
                     Vector3.zero,
                     BaseSortingOrder + 20
                 );
                 CreateOutlinedText(
                     "CriticalLabel",
                     "CH\u00cd M\u1ea0NG",
-                    font,
-                    0.031f,
+                    fallbackFont,
+                    0.034f,
                     CritLabel,
                     SoftRed,
-                    0.009f,
-                    new Vector3(0f, 0.26f, 0f),
+                    0.011f,
+                    new Vector3(0f, 0.36f, 0f),
                     BaseSortingOrder + 30
                 );
                 break;
@@ -87,12 +88,12 @@ public sealed class DamagePopup : MonoBehaviour
             case DamagePopupType.PlayerDamage:
                 CreateOutlinedText(
                     "PlayerDamageValue",
-                    $"-{value}",
-                    font,
-                    0.061f,
-                    PlayerRed,
-                    DeepRed,
-                    0.014f,
+                    value,
+                    numberFont,
+                    0.086f,
+                    SoftRed,
+                    DarkBlue,
+                    0.023f,
                     Vector3.zero,
                     BaseSortingOrder + 10
                 );
@@ -102,11 +103,11 @@ public sealed class DamagePopup : MonoBehaviour
                 CreateOutlinedText(
                     "DamageValue",
                     value,
-                    font,
-                    0.058f,
+                    numberFont,
+                    0.074f,
                     SoftRed,
-                    DeepRed,
-                    0.013f,
+                    DarkBlue,
+                    0.019f,
                     Vector3.zero,
                     BaseSortingOrder + 10
                 );
@@ -193,7 +194,9 @@ public sealed class DamagePopup : MonoBehaviour
         textMesh.text = value;
         textMesh.font = font;
         textMesh.fontSize = 64;
-        textMesh.fontStyle = FontStyle.Bold;
+        textMesh.fontStyle = font == Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf")
+            ? FontStyle.Bold
+            : FontStyle.Normal;
         textMesh.characterSize = characterSize;
         textMesh.anchor = TextAnchor.MiddleCenter;
         textMesh.alignment = TextAlignment.Center;

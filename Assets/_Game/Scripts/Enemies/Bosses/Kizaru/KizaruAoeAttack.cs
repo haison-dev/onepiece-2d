@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,6 +35,12 @@ public sealed class KizaruAoeAttack : MonoBehaviour
     private bool ownsEffectRenderer;
     private Vector2 lastImpactPosition;
     private float nextAttackAt;
+    private bool aiEnabled = true;
+    private bool damageEnabled = true;
+    private bool damagePopupEnabled = true;
+
+    public event Action<Vector2> AttackStarted;
+    public event Action<Vector3, int> DamageApplied;
 
     private void Awake()
     {
@@ -44,6 +51,9 @@ public sealed class KizaruAoeAttack : MonoBehaviour
 
     private void Update()
     {
+        if (!aiEnabled)
+            return;
+
         if (attackRoutine != null || Time.time < nextAttackAt)
             return;
 
@@ -52,10 +62,14 @@ public sealed class KizaruAoeAttack : MonoBehaviour
             return;
 
         if ((player.transform.position - transform.position).sqrMagnitude <= castRange * castRange)
-            attackRoutine = StartCoroutine(PlayAttack(player));
+        {
+            Vector2 impactPosition = (Vector2)player.transform.position + effectOffset;
+            AttackStarted?.Invoke(impactPosition);
+            attackRoutine = StartCoroutine(PlayAttack(impactPosition, damageEnabled));
+        }
     }
 
-    private IEnumerator PlayAttack(PlayerStats target)
+    private IEnumerator PlayAttack(Vector2 impactPosition, bool dealDamage)
     {
         if (attackFrames == null || attackFrames.Length == 0)
         {
@@ -92,11 +106,10 @@ public sealed class KizaruAoeAttack : MonoBehaviour
             {
                 if (!damageApplied)
                 {
-                    lastImpactPosition = target != null
-                        ? (Vector2)target.transform.position + effectOffset
-                        : (Vector2)transform.position + effectOffset;
+                    lastImpactPosition = impactPosition;
                     MoveEffectTo(lastImpactPosition);
-                    ApplyAoeDamage(lastImpactPosition);
+                    if (dealDamage)
+                        ApplyAoeDamage(lastImpactPosition);
                     damageApplied = true;
                 }
 
@@ -134,13 +147,37 @@ public sealed class KizaruAoeAttack : MonoBehaviour
             if (target == null || !hitTargets.Add(target))
                 continue;
 
-            target.TakeDamage(damage);
-            DamagePopup.Show(
-                DamagePopup.PositionAbove(hit),
-                damage,
-                DamagePopupType.PlayerDamage
-            );
+            DamageResult result = DamageSystem.Apply(target, new DamageRequest(damage));
+            if (!result.WasApplied)
+                continue;
+
+            Vector3 popupPosition = DamagePopup.PositionAbove(hit);
+            DamageApplied?.Invoke(popupPosition, result.AppliedDamage);
+
+            if (damagePopupEnabled)
+            {
+                DamagePopup.Show(
+                    popupPosition,
+                    result.AppliedDamage,
+                    DamagePopupType.PlayerDamage
+                );
+            }
         }
+    }
+
+    public void ConfigureNetworkRole(bool isServer)
+    {
+        aiEnabled = isServer;
+        damageEnabled = isServer;
+        damagePopupEnabled = false;
+    }
+
+    public void PlayRemoteAttack(Vector2 impactPosition)
+    {
+        if (attackRoutine != null)
+            return;
+
+        attackRoutine = StartCoroutine(PlayAttack(impactPosition, false));
     }
 
     private void SetupEffectRenderer()

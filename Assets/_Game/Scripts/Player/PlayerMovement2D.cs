@@ -15,8 +15,11 @@ public sealed class PlayerMovement2D : MonoBehaviour
     private Vector2 autoMoveInput;
     private bool isAutoMoving;
     private bool isMovementLocked;
+    private bool readsLocalInput = true;
+    private bool simulatesMovement = true;
 
     public bool IsMovementLocked => isMovementLocked;
+    public float MoveSpeed => moveSpeed;
 
     private void Awake()
     {
@@ -34,6 +37,14 @@ public sealed class PlayerMovement2D : MonoBehaviour
 
     private void Update()
     {
+        if (!readsLocalInput)
+        {
+            if (simulatesMovement)
+                UpdateMovementVisuals();
+
+            return;
+        }
+
         if (isMovementLocked)
         {
             movementInput = Vector2.zero;
@@ -57,12 +68,46 @@ public sealed class PlayerMovement2D : MonoBehaviour
             movementInput = isAutoMoving ? autoMoveInput : Vector2.zero;
         }
 
-        animator.SetBool(IsMovingHash, movementInput.sqrMagnitude > 0.01f);
+        UpdateMovementVisuals();
+    }
+
+    public void ConfigureNetworkControl(bool isServerSimulation)
+    {
+        readsLocalInput = false;
+        simulatesMovement = isServerSimulation;
+        isAutoMoving = false;
+        autoMoveInput = Vector2.zero;
+        movementInput = Vector2.zero;
+
+        if (body != null)
+        {
+            body.linearVelocity = Vector2.zero;
+            body.simulated = isServerSimulation;
+        }
+
+        if (animator != null && isServerSimulation)
+            animator.SetBool(IsMovingHash, false);
+    }
+
+    public void SetNetworkMovementInput(Vector2 direction)
+    {
+        if (!simulatesMovement || isMovementLocked)
+        {
+            movementInput = Vector2.zero;
+            return;
+        }
+
+        movementInput = Vector2.ClampMagnitude(direction, 1f);
+        UpdateMovementVisuals();
+    }
+
+    private void UpdateMovementVisuals()
+    {
+        bool isMoving = !isMovementLocked && movementInput.sqrMagnitude > 0.01f;
+        animator.SetBool(IsMovingHash, isMoving);
 
         if (spriteRenderer != null && !Mathf.Approximately(movementInput.x, 0f))
-        {
             spriteRenderer.flipX = movementInput.x < 0f;
-        }
     }
 
     public void SetAutoMoveDirection(Vector2 direction)
@@ -103,6 +148,9 @@ public sealed class PlayerMovement2D : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!simulatesMovement)
+            return;
+
         // Let Rigidbody2D resolve collisions with the four map walls.
         body.linearVelocity = isMovementLocked
             ? Vector2.zero

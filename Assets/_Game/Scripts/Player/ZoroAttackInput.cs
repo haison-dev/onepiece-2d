@@ -8,7 +8,8 @@ public class ZoroAttackInput : MonoBehaviour
 {
     [Header("Auto Attack")]
     [SerializeField, Min(0.1f)] private float targetSearchRadius = 8f;
-    [SerializeField] private KeyCode autoAttackKey = KeyCode.J;
+    [SerializeField] private KeyCode targetKey = KeyCode.Tab;
+    [SerializeField] private KeyCode autoAttackKey = KeyCode.Q;
     [SerializeField] private string attackStateName = "Zoro_Attack";
     [SerializeField, Min(0)] private int basicAttackManaCost = 1;
 
@@ -23,11 +24,16 @@ public class ZoroAttackInput : MonoBehaviour
     [SerializeField] private int skill4AuraSortingOrder = 1;
     [SerializeField, Min(0.1f)] private float skill4ActiveDuration = 20f;
     [SerializeField, Min(0f)] private float skill4Cooldown = 1f;
+    [SerializeField, Min(0)] private int skill4ManaCost = 20;
+    [SerializeField, Min(1f)] private float skill4DamageMultiplier = 2f;
 
     private Animator animator;
     private PlayerMovement2D movement;
     private PlayerAttackHitbox2D attackHitbox;
     private PlayerStats stats;
+    private TargetSystem targetSystem;
+    private TargetBossHUD targetHud;
+    private CharacterProgressionHUD progressionHud;
     private PlayerSkillHUD skillHud;
     private EnemyHealth currentTarget;
     private bool isAutoAttackEnabled;
@@ -65,6 +71,15 @@ public class ZoroAttackInput : MonoBehaviour
         movement = GetComponent<PlayerMovement2D>();
         attackHitbox = GetComponent<PlayerAttackHitbox2D>();
         stats = GetComponent<PlayerStats>();
+        targetSystem = GetComponent<TargetSystem>();
+        if (targetSystem == null)
+            targetSystem = gameObject.AddComponent<TargetSystem>();
+        targetHud = GetComponent<TargetBossHUD>();
+        if (targetHud == null)
+            targetHud = gameObject.AddComponent<TargetBossHUD>();
+        progressionHud = GetComponent<CharacterProgressionHUD>();
+        if (progressionHud == null)
+            progressionHud = gameObject.AddComponent<CharacterProgressionHUD>();
         skillHud = GetComponent<PlayerSkillHUD>();
         if (skill4EffectRenderer == null)
         {
@@ -89,6 +104,12 @@ public class ZoroAttackInput : MonoBehaviour
             skillHud.SkillPressed += HandleSkillPressed;
             skillHud.SetSkillInteractable(4, CanActivateSkill4);
         }
+
+        if (attackHitbox != null)
+        {
+            attackHitbox.EnemyDefeated -= HandleEnemyDefeated;
+            attackHitbox.EnemyDefeated += HandleEnemyDefeated;
+        }
     }
 
     private void Update()
@@ -97,9 +118,11 @@ public class ZoroAttackInput : MonoBehaviour
 
         if (movement.IsMovementLocked)
         {
-            if (isAutoAttackEnabled)
-                StopAutoAttack();
-
+            // A hit reaction pauses the current swing but preserves auto attack
+            // and the selected target so combat resumes after the lock ends.
+            isAttackInProgress = false;
+            hasEnteredAttackState = false;
+            movement.StopAutoMovement();
             return;
         }
 
@@ -109,6 +132,9 @@ public class ZoroAttackInput : MonoBehaviour
         UpdateSkill4Cycle();
         if (isSkill4InProgress)
             return;
+
+        if (Input.GetKeyDown(targetKey))
+            SelectNextTarget();
 
         if (Input.GetKeyDown(autoAttackKey))
             ToggleAutoAttack();
@@ -131,6 +157,9 @@ public class ZoroAttackInput : MonoBehaviour
         if (!CanActivateSkill4 || isSkill4InProgress || movement.IsMovementLocked)
             return;
 
+        if (skill4ManaCost > 0 && !stats.TrySpendMana(skill4ManaCost))
+            return;
+
         SetAutoAttackEnabled(false);
         movement.StopAutoMovement();
         if (skill4EffectRenderer != null)
@@ -142,6 +171,7 @@ public class ZoroAttackInput : MonoBehaviour
         isSkill4InProgress = true;
         hasEnteredSkill4State = false;
         isSkill4Active = true;
+        attackHitbox.SetDamageMultiplier(skill4DamageMultiplier);
         skill4ActiveUntil = Time.time + skill4ActiveDuration;
         skill4ReadyAt = skill4ActiveUntil + skill4Cooldown;
         StartSkill4Aura();
@@ -158,6 +188,7 @@ public class ZoroAttackInput : MonoBehaviour
         if (isSkill4Active && Time.time >= skill4ActiveUntil)
         {
             isSkill4Active = false;
+            attackHitbox.SetDamageMultiplier(1f);
             StopSkill4Aura();
         }
 
@@ -281,10 +312,48 @@ public class ZoroAttackInput : MonoBehaviour
         skill4AuraRenderer.sprite = null;
     }
 
+    public void ApplyNetworkSkill4State(
+        bool active,
+        float activeTimeRemaining,
+        float readyTimeRemaining)
+    {
+        isSkill4InProgress = false;
+        hasEnteredSkill4State = false;
+        isSkill4Active = active;
+        skill4ActiveUntil = Time.time + Mathf.Max(0f, activeTimeRemaining);
+        skill4ReadyAt = Time.time + Mathf.Max(0f, readyTimeRemaining);
+        attackHitbox?.SetDamageMultiplier(active ? skill4DamageMultiplier : 1f);
+
+        if (active)
+            StartSkill4Aura();
+        else
+            StopSkill4Aura();
+
+        if (skillHud != null)
+            skillHud.SetSkillInteractable(4, !active && readyTimeRemaining <= 0f);
+    }
+
+    public void TickNetworkSkill4Presentation()
+    {
+        UpdateSkill4Lifetime();
+        UpdateSkill4Aura();
+    }
+
+    public void SetNetworkAutoAttackVisual(bool enabled)
+    {
+        isAutoAttackEnabled = enabled;
+    }
+
     private void HandleSkillPressed(int skillNumber)
     {
         if (skillNumber == 4)
             ActivateSkill4();
+    }
+
+    private void HandleEnemyDefeated(EnemyHealth enemy)
+    {
+        if (enemy != null)
+            stats.AddExperience(enemy.ExperienceReward);
     }
 
     private void UpdateSkill4Cycle()
@@ -331,29 +400,27 @@ public class ZoroAttackInput : MonoBehaviour
 
         if (enabled)
         {
-            currentTarget = FindNearestTarget();
+            // Q always starts auto attack on the nearest valid enemy.
+            currentTarget = targetSystem != null
+                ? targetSystem.FindNearestEnemy(targetSearchRadius)
+                : null;
+            targetHud?.SetTarget(currentTarget);
 
-            // Auto attack only stays active while there is a nearby target.
-            if (currentTarget == null)
-                StopAutoAttack();
+            if (!IsCurrentTargetValid())
+                StopAutoAttack(true);
 
             return;
         }
 
-        StopAutoAttack();
+        StopAutoAttack(false);
     }
 
     private void UpdateAutoAttack()
     {
         if (!IsCurrentTargetValid())
         {
-            currentTarget = FindNearestTarget();
-
-            if (currentTarget == null)
-            {
-                StopAutoAttack();
-                return;
-            }
+            StopAutoAttack(true);
+            return;
         }
 
         Vector2 toTarget = currentTarget.transform.position - transform.position;
@@ -380,7 +447,7 @@ public class ZoroAttackInput : MonoBehaviour
     {
         if (basicAttackManaCost > 0 && !stats.TrySpendMana(basicAttackManaCost))
         {
-            StopAutoAttack();
+            StopAutoAttack(false);
             return;
         }
 
@@ -419,41 +486,19 @@ public class ZoroAttackInput : MonoBehaviour
 
     private bool IsCurrentTargetValid()
     {
-        if (currentTarget == null || currentTarget.IsDead)
-            return false;
-
-        float sqrDistance =
-            (currentTarget.transform.position - transform.position).sqrMagnitude;
-
-        return sqrDistance <= targetSearchRadius * targetSearchRadius;
+        return targetSystem != null &&
+               targetSystem.IsValid(currentTarget, targetSearchRadius);
     }
 
-    private EnemyHealth FindNearestTarget()
+    private void SelectNextTarget()
     {
-        EnemyHealth nearestTarget = null;
-        float nearestSqrDistance = targetSearchRadius * targetSearchRadius;
+        if (targetSystem == null)
+            return;
 
-        EnemyHealth[] enemies = FindObjectsByType<EnemyHealth>(
-            FindObjectsInactive.Exclude,
-            FindObjectsSortMode.None
-        );
-
-        foreach (EnemyHealth enemy in enemies)
-        {
-            if (enemy.IsDead)
-                continue;
-
-            float sqrDistance =
-                (enemy.transform.position - transform.position).sqrMagnitude;
-
-            if (sqrDistance > nearestSqrDistance)
-                continue;
-
-            nearestSqrDistance = sqrDistance;
-            nearestTarget = enemy;
-        }
-
-        return nearestTarget;
+        currentTarget = targetSystem.FindNextEnemy(currentTarget, targetSearchRadius);
+        targetHud?.SetTarget(currentTarget);
+        if (currentTarget == null)
+            StopAutoAttack(true);
     }
 
     private static bool HasManualMovementInput()
@@ -462,12 +507,16 @@ public class ZoroAttackInput : MonoBehaviour
                !Mathf.Approximately(Input.GetAxisRaw("Vertical"), 0f);
     }
 
-    private void StopAutoAttack()
+    private void StopAutoAttack(bool clearTarget = false)
     {
         isAutoAttackEnabled = false;
         isAttackInProgress = false;
         hasEnteredAttackState = false;
-        currentTarget = null;
+        if (clearTarget)
+        {
+            currentTarget = null;
+            targetHud?.ClearTarget();
+        }
 
         if (animator != null)
             animator.ResetTrigger(AttackHash);
@@ -481,9 +530,13 @@ public class ZoroAttackInput : MonoBehaviour
         if (skillHud != null)
             skillHud.SkillPressed -= HandleSkillPressed;
 
+        if (attackHitbox != null)
+            attackHitbox.EnemyDefeated -= HandleEnemyDefeated;
+
         isSkill4InProgress = false;
         hasEnteredSkill4State = false;
         isSkill4Active = false;
+        attackHitbox?.SetDamageMultiplier(1f);
         skill4ActiveUntil = 0f;
         skill4ReadyAt = 0f;
         if (animator != null)
@@ -494,7 +547,7 @@ public class ZoroAttackInput : MonoBehaviour
         if (skillHud != null)
             skillHud.SetSkillInteractable(4, true);
 
-        StopAutoAttack();
+        StopAutoAttack(true);
     }
 
     private void OnValidate()
@@ -506,6 +559,8 @@ public class ZoroAttackInput : MonoBehaviour
         skill4AuraSortingOrder = Mathf.Max(1, skill4AuraSortingOrder);
         skill4ActiveDuration = Mathf.Max(0.1f, skill4ActiveDuration);
         skill4Cooldown = Mathf.Max(0f, skill4Cooldown);
+        skill4ManaCost = Mathf.Max(0, skill4ManaCost);
+        skill4DamageMultiplier = Mathf.Max(1f, skill4DamageMultiplier);
 
         if (string.IsNullOrWhiteSpace(attackStateName))
             attackStateName = "Zoro_Attack";

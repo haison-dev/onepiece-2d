@@ -4,6 +4,9 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Game/Scenes/Gameplay/Prototype_Battle.unity
+    guid: b102c6a69fb20204cae920564f8f2be9
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

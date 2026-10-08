@@ -36,6 +36,7 @@ public sealed class PlayerSkillHUD : MonoBehaviour
     private bool previewDirty;
 
     public event Action<int> SkillPressed;
+    public event Action BasicAttackPressed;
 
     private void Awake()
     {
@@ -89,6 +90,12 @@ public sealed class PlayerSkillHUD : MonoBehaviour
         int index = skillNumber - 1;
         if (index >= 0 && index < skillButtons.Length && skillButtons[index] != null)
             skillButtons[index].interactable = interactable;
+    }
+
+    public void SetHudVisible(bool visible)
+    {
+        if (canvasObject != null)
+            canvasObject.SetActive(visible);
     }
 
     public void SetSkillIcon(int skillNumber, Sprite icon)
@@ -292,7 +299,9 @@ public sealed class PlayerSkillHUD : MonoBehaviour
 
     private void ToggleBasicAttack()
     {
-        if (attackInput != null)
+        if (BasicAttackPressed != null)
+            BasicAttackPressed.Invoke();
+        else if (attackInput != null)
             attackInput.ToggleAutoAttack();
     }
 
